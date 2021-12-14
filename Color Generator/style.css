@@ -1,0 +1,260 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  /* primary dark shades */
+  --clr-primary-1: hsl(205, 75%, 19%);
+  --clr-primary-2: hsl(205, 55%, 29%);
+  --clr-primary-3: hsl(205, 72%, 39%);
+  --clr-primary-4: hsl(205, 85%, 29%);
+  /* primary light shades  */
+  --clr-primary-5: hsl(205, 77%, 35%);
+  --clr-primary-6: hsl(205, 75%, 42%);
+  --clr-primary-7: hsl(205, 85%, 49%);
+  --clr-primary-8: hsl(205, 95%, 59%);
+  --clr-primary-9: hsl(205, 75%, 79%);
+  --clr-primary-10: hsl(205, 85%, 80%);
+  /* grey dark shades used for headings  */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(212, 14%, 34%);
+  --clr-grey-3: hsl(212, 14%, 34%);
+  --clr-grey-4: hsl(212, 14%, 34%);
+  /* --clr-grey-: hsl(212, 14%, 34%); */
+  /* grey light shades used for paragraphs */
+  --clr-grey-5: hsl(212, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 24%, 49%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-black: #222;
+  --clr-red-dark: hsl(360, 75%, 57%);
+  --clr-red-light: hsl(360, 65%, 67%);
+  --clr-green-dark: hsl(125, 55%, 37%);
+  --clr-green-light: hsl(125, 67%, 57%);
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --transition: all 0.3s linear;
+  --fixed-width: 620px;
+  --max-width: 1170px;
+  --dark-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  --light-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/*
+===============
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  line-height: 1.5;
+  background: var(--clr-grey-10);
+  font-size: 0.875rem;
+  font-family: var(--ff-secondary);
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--ff-primary);
+  color: var(--clr-grey-1);
+  line-height: 1.25;
+  margin: 1rem;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  color: var(--clr-grey-5);
+  margin-bottom: 1.25rem;
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+/*
+==============
+Global Classes
+==============
+*/
+
+.section {
+  padding: 5rem 0;
+}
+
+.section-center {
+  width: 90vw;
+  max-width: var(--max-width);
+  place-items: center;
+}
+
+@media screen and (min-width: 920px) {
+  .section-center {
+    width: 95vw;
+  }
+}
+
+main {
+  min-height: 100vh;
+  margin: 0 auto;
+  place-items: center;
+}
+
+/*
+============
+Nav
+============
+*/
+
+nav {
+  height: 3rem;
+  background: var(--clr-white);
+  box-shadow: var(--dark-shadow);
+  align-items: center;
+  display: grid;
+}
+
+.nav-center {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  margin: 0 auto;
+  width: 90vw;
+  max-width: var(--max-width);
+  text-transform: capitalize;
+}
+
+.nav-center h4 {
+  color: var(--clr-primary-5);
+  margin-bottom: 0;
+}
+
+.nav-links {
+  display: flex;
+}
+
+nav a {
+  font-size: 1rem;
+  margin-right: 1rem;
+  color: var(--clr-primary-1);
+  display: flex;
+  font-weight: 700;
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+}
+
+nav a:hover {
+  color: var(--clr-primary-5);
+}
+
+/*
+==============
+Container
+==============
+*/
+
+main {
+  min-height: calc(100vh - 3rem);
+  place-items: center;
+  display: grid;
+}
+
+.container {
+  text-align: center;
+}
+
+.container h2 {
+  background: var(--clr-black);
+  color: var(--clr-white);
+  letter-spacing: var(--spacing);
+  padding: 1rem;
+  border-radius: var(--radius);
+  margin-bottom: 2.5rem;
+}
+
+.generator {
+  width: 70vw;
+}
+
+.color {
+  color: var(--clr-primary-5);
+}
+
+.btn-hero {
+  background: transparent;
+  font-size: 1rem;
+  font-family: var(--ff-primary);
+  color: var(--clr-black);
+  text-transform: uppercase;
+  padding: 0.75rem 1.25rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  border: 2px solid var(--clr-black);
+  letter-spacing: var(--spacing);
+  border-radius: var(--radius);
+  transition: var(--transition);
+  display: inline-block;
+}
+
+.btn-hero:hover {
+  color: var(--clr-white);
+  background: var(--clr-black);
+}
+
